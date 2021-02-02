@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../src/css/style.css" />
+    <title>DQS | LOGIN</title>
+  </head>
+  <body class="log-in-page">
+    <div class="container">
+      <div class="forms-container">
+        <div class="forms">
+          <div class="title"></div>
+          <div class="login-details">
+            <form action="">
+              <br />
+              <span>USERNAME :</span><br />
+              <input
+                type="text"
+                placeholder="username"
+                onkeyup="checkIfValidUser(this)"
+                id="username"
+              />
+              <br /><br /><br />
+              <span>PASSWORD :</span><br />
+              <input
+                type="password"
+                placeholder="password"
+                onkeyup="checkIfValidPassword(this)"
+                id="password"
+              />
+              <br /><br /><br /><br />
+            </form>
+            <center>
+              <input type="submit" value="Login" class="login-btn" />
+              <br /><br />
+              <input
+                type="submit"
+                value="Forgot Password?"
+                class="forgot-password"
+                onclick="showPassword()"
+              />
+            </center>
+            <br /><br /><br /><br /><br /><br /><br />
+            <hr />
+            <center>
+              <span class="register">
+                Don't Have an Account Yet?
+                <input
+                  type="submit"
+                  value="Register"
+                  class="register-link"
+                  onclick="login()"
+                />
+              </span>
+            </center>
+          </div>
+        </div>
+      </div>
+      <div class="side-des"></div>
+    </div>
+
+    <script src="./js/log-in.js"></script>
+  </body>
+</html>
