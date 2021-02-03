@@ -1,4 +1,5 @@
 @import "./log-in.css";
+@import "./shop.css";
 
 /* DEFAULT CSS */
 html {
@@ -28,12 +29,27 @@ a {
 input[type="submit"] {
   outline: 0;
   cursor: pointer;
+  border: 0;
 }
 
 input[type="text"],
 input[type="password"]:focus {
   outline: 1;
   outline-color: white;
+}
+
+hr {
+  margin: 10px 0;
+  height: 1px;
+  border: 0;
+  background: black;
+  background-image: linear-gradient(
+    to right,
+    white,
+    rgba(204, 204, 204, 0.01),
+    white
+  );
+  opacity: 0.5;
 }
 
 /* CUSTOM CSS */
@@ -62,4 +78,16 @@ input[type="password"]:focus {
   background-color: white;
   color: #771a1a;
   border: 1px solid #771a1a;
+}
+
+.date-time {
+  color: black;
+  position: absolute;
+  top: -10px;
+  left: 90%;
+}
+
+.date-time:hover {
+  color: #771a1a;
+  cursor: context-menu;
 }

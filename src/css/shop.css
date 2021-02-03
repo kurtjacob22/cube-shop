@@ -1,0 +1,151 @@
+.shop-page {
+  background-image: url("./assets/VectorSqaures.png");
+  background-size: 80%;
+  background-position: center center;
+}
+
+.navigation {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  position: fixed;
+  background-color: white;
+  z-index: 2;
+  box-shadow: 10px 10px 50px rgb(196, 196, 196);
+}
+
+.logo {
+  margin-left: 50px;
+  width: 10%;
+  height: 80px;
+  background-image: url("./assets/VectorDQ.png");
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.logo:hover {
+  opacity: 0.5;
+}
+
+.links {
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
+  background: white;
+  font-family: raleway;
+  /* transition: 0.5s ease; */
+}
+
+.home-link {
+  background-color: white;
+  color: #e27628;
+
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.home-link:hover {
+  background-color: #e27628;
+  color: white;
+}
+
+.shop-link {
+  background-color: #c92e2e;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* .shop-link:hover {
+  background-color: white;
+  color: #c92e2e;
+} */
+
+.tournament-link {
+  color: #2d41aa;
+}
+
+.tournament-link:hover {
+  color: white;
+  background-color: #2d41aa;
+}
+
+.ourstory-link {
+  color: #3dbc68;
+}
+
+.ourstory-link:hover {
+  color: white;
+  background-color: #3dbc68;
+}
+
+.logout-link {
+  margin-left: 600px;
+}
+
+.logout-link:hover {
+  background-color: black;
+  color: white;
+}
+
+/* HEADER */
+/* HEADER */
+/* HEADER */
+/* HEADER */
+
+.header {
+  width: 90%;
+  height: 335px;
+  background-image: url("./assets/banner-head.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 13px;
+  box-shadow: 10px 10px 50px rgb(196, 196, 196);
+}
+
+.first {
+  width: 100%;
+}
+
+.products-title {
+  position: absolute;
+  left: 700px;
+  margin-top: 15px;
+  background-color: white;
+  z-index: 1;
+}
+
+.cart {
+  width: 10%;
+  height: 60px;
+  background-color: #3dbc68;
+  border-radius: 13px;
+  position: absolute;
+  left: -50px;
+  z-index: 1;
+}
+
+.cart-logo {
+  position: absolute;
+  width: 35px;
+  top: 12px;
+  left: 60px;
+}
+
+.count-purchases {
+  position: absolute;
+  color: white;
+  top: 10px;
+  left: 10px;
+  overflow: hidden;
+}
+
+.items-title {
+  color: white;
+  font-size: 10px;
+  position: absolute;
+  top: 33px;
+  left: 10px;
+}

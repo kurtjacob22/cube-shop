@@ -101,20 +101,6 @@ input[type="password"] {
   color: #c92e2e;
 }
 
-hr {
-  margin: 10px 0;
-  height: 1px;
-  border: 0;
-  background: black;
-  background-image: linear-gradient(
-    to right,
-    white,
-    rgba(204, 204, 204, 0.01),
-    white
-  );
-  opacity: 0.5;
-}
-
 .register {
   font-size: 13px;
   font-weight: 500;

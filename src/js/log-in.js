@@ -35,7 +35,9 @@ function checkIfValidPassword(pass) {
 }
 
 function showPassword() {
-  if (userCred == undefined) {
+  var input = document.getElementById("username").value;
+
+  if (userCred == undefined || input === "") {
     alert("Please enter your username first");
   } else {
     alert("Your Password is: " + passwords[userCred]);
@@ -46,6 +48,7 @@ function showPassword() {
 function login() {
   if (verifiedPass == true) {
     alert("login success");
+    window.location.replace("././shop.html");
   } else {
     alert("Please Enter valid username and password");
   }
