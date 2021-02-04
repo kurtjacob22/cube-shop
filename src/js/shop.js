@@ -158,9 +158,18 @@ function filterProduct() {
 }
 
 function Home() {
-  window.location.replace("././shop.html");
+  window.location.href = "../../index.html";
 }
 
 function Shop() {
   window.location.replace("././shop.html");
+}
+
+function Tournament() {
+  alert("closing this page means that you are logging out your account");
+  window.location.replace("https://www.worldcubeassociation.org/competitions");
+}
+
+function LogOut() {
+  window.location.replace("../../index.html");
 }
