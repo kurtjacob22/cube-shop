@@ -4,7 +4,7 @@ var totalPrice = 0;
 function addToCart(amount) {
   count++;
   totalPrice += amount;
-  document.getElementById("countPurchases").innerHTML = count++;
+  document.getElementById("countPurchases").innerHTML = count;
   document.getElementById("displayTotal").innerHTML = "TOTAL : $" + totalPrice;
 }
 
