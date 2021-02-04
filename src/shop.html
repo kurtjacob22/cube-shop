@@ -9,33 +9,334 @@
     <div class="navigation">
       <div class="logo"></div>
       <div class="links-container">
-        <input type="submit" value="HOME" class="home-link links" />
-        <input type="submit" value="SHOP" class="shop-link links" />
-        <input type="submit" value="TOURNAMENT" class="tournament-link links" />
-        <input type="submit" value="OUR STORY" class="ourstory-link links" />
-        <input type="submit" value="LOGOUT" class="logout-link links" />
+        <input
+          type="submit"
+          value="HOME"
+          class="home-link links"
+          onclick="Home()"
+        />
+        <input
+          type="submit"
+          value="SHOP"
+          class="shop-link links"
+          onclick="Shop()"
+        />
+        <input
+          type="submit"
+          value="TOURNAMENT"
+          class="tournament-link links"
+          onclick="Tournament()"
+        />
+        <input
+          type="submit"
+          value="OUR STORY"
+          class="ourstory-link links"
+          onclick="OurStory()"
+        />
+        <input
+          type="submit"
+          value="LOGOUT"
+          class="logout-link links"
+          onclick="LogOut()"
+        />
       </div>
     </div>
-
-    <br /><br /><br /><br /><br /><br /><br />
-    <!-- HEADER -->
-    <center><div class="header"></div></center>
-
-    <br /><br />
-    <div class="cart">
-      <span class="count-purchases">0</span>
-      <span class="items-title">items</span>
-      <img src="./css/assets/shopping-cart 1.png" class="cart-logo" />
-    </div>
-    <span class="products-title">
-      ■ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRODUCTS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;■
-    </span>
-
     <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <!-- HEADER -->
+    <center>
+      <div class="header"></div>
+    </center>
+    <br />
+    <br />
+    <div class="cart">
+      <span class="count-purchases" id="countPurchases">0</span>
+      <span class="items-title">items</span>
+      <span class="items-title total-amt" id="displayTotal">TOTAL : $0</span>
+      <img
+        src="./css/assets/shopping-cart%201.png"
+        class="cart-logo"
+        alt="shopping-cart%201"
+      />
+    </div>
+    <span class="products-title"
+      >■ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PRODUCTS
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;■</span
+    ><br />
     <hr class="first" />
 
     <!-- PRODUCTS -->
+    <br /><br /><br />
+    <center>
+      <table
+        border="0"
+        cellspacing="0"
+        cellpadding="10"
+        width="90%"
+        height="1000px"
+      >
+        <tr height="200px">
+          <td colspan="3" valign="top">
+            <span>SORT BY:</span>
+            <select class="sort" onchange="filterProduct()" id="filterPrice">
+              <option value="Price">ALL</option>
+              <option value="under">Under $10</option>
+              <option value="above">$10 - $20</option>
+              <option value="stickered">Stickered Cube</option>
+              <option value="stickerless">Stickerless</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" align="center" width="30%" id="yuxinProduct">
+            <hr width="100%" color="#FF7E26" size="4px;" align="left" />
+            <img src="./css/assets/yuxin.jpg" width="65%" alt="yuxin" />
+            <blockquote>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                >YuXin Little Magic 3x3</font
+              ><br />
+              <font face="century gothic" size="4px" color="black">$5.00</font>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                ><br />
+                <br />
+                The Little Magic 3x3 M is a factory magnetized version of
+                Yuxin's extremely popular budget 3x3. This puzzle features a
+                glossy exterior, medium/strong magnets, and controllable turning
+                right out of the box.</font
+              >
+            </blockquote>
+            <input
+              type="submit"
+              value="ADD TO CART"
+              class="addtocart-btn"
+              id="littleMagicBtn"
+              onclick="addToCart(5)"
+            />
+          </td>
+          <td valign="top" align="center" width="30%" id="gts3MProduct">
+            <hr width="100%" color="#FF7E26" size="4px;" align="left" />
+            <img src="./css/assets/weilong.jpg" width="65%" alt="weilong" />
+            <blockquote>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                >MoYu WeiLong GTS3 M</font
+              ><br />
+              <font face="century gothic" size="4px" color="black">$10.00</font>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                ><br />
+                <br />
+                The WeiLong GTS3 M is a flagship 3x3 speed cube from MoYu. The
+                GTS3 M is outfitted with a variety of innovative new features
+                including a spring compression gear system and outer ridges to
+                assist grip.</font
+              >
+            </blockquote>
+            <input
+              type="submit"
+              value="ADD TO CART"
+              class="addtocart-btn"
+              id="gts3MBtn"
+              onclick="addToCart(10)"
+            />
+          </td>
+          <td valign="top" align="center" width="30%" id="valk3Product">
+            <hr width="100%" color="#FF7E26" size="4px;" align="left" />
+            <img src="./css/assets/valk.jpg" width="65%" alt="valk" />
+            <blockquote>
+              <font face="verdana" size="2px" color="#6F6F6F">Valk 3 Elite</font
+              ><br />
+              <font face="century gothic" size="4px" color="black">$10.00</font>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                ><br />
+                <br />
+                The Valk 3 Elite is the long-awaited flagship from the famous
+                Valk line by QiYi MoFangGe. This cube features a brand new
+                magnetic system with three different levels of strength. The
+                moderate and strong versions features a "twin-magnetic" scheme
+                and uses "center-edge" plus "corner-edge" magnetism for
+                positioning.</font
+              >
+            </blockquote>
+            <input
+              type="submit"
+              value="ADD TO CART"
+              class="addtocart-btn"
+              id="valk3EliteBtn"
+              onclick="addToCart(10)"
+            />
+          </td>
+        </tr>
 
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <tr>
+          <td valign="top" align="center" width="30%" id="dayanProduct">
+            <hr width="100%" color="#FF7E26" size="4px;" align="left" />
+            <img src="./css/assets/dayan.jpg" width="65%" alt="dayan" />
+            <blockquote>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                >DaYan TengYun M</font
+              ><br />
+              <font face="century gothic" size="4px" color="black">$7.00</font>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                ><br />
+                <br />
+                The DaYan TengYun M 3x3 is a smooth, 55mm 3x3 that is possibly
+                one of the quietest puzzles on the market. It has a unique
+                design and feel that set it apart from other modern 3x3s. Out of
+                the box the puzzle is a little scratchy, but after some light
+                breaking in the turning is fantastic.</font
+              >
+            </blockquote>
+            <input
+              type="submit"
+              value="ADD TO CART"
+              class="addtocart-btn"
+              id="dayanBtn"
+              onclick="addToCart(7)"
+            />
+          </td>
+          <td valign="top" align="center" width="30%" id="gan356Product">
+            <hr width="100%" color="#FF7E26" size="4px;" align="left" />
+            <img src="./css/assets/gan356.jpg" width="65%" alt="gan356" />
+            <blockquote>
+              <font face="verdana" size="2px" color="#6F6F6F">GAN356 X</font
+              ><br />
+              <font face="century gothic" size="4px" color="black">$20.00</font>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                ><br />
+                <br />
+                The GAN356 X is the highly-anticipated successor to the GAN Air
+                SM. This 3x3 speed cube is loaded with a host of unique,
+                innovative technologies, including the numerical IPG tensioning
+                system and the new GAN Magnetic System, a set of interchangeable
+                magnetic capsules.</font
+              >
+            </blockquote>
+            <input
+              type="submit"
+              value="ADD TO CART"
+              class="addtocart-btn"
+              id="gan356Btn"
+              onclick="addToCart(20)"
+            />
+          </td>
+          <td valign="top" align="center" width="30%" id="qiyiProduct">
+            <hr width="100%" color="#FF7E26" size="4px;" align="left" />
+            <img
+              src="./css/assets/thunderclap.jpg"
+              width="65%"
+              alt="thunderclap"
+            />
+            <blockquote>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                >QiYi Thunderclap</font
+              ><br />
+              <font face="century gothic" size="4px" color="black">$5.00</font>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                ><br />
+                <br />
+                The QiYi Thunderclap 3x3 is the latest speed cube in QiYi's
+                MoFangGe series. The mechanism appears to be an improved version
+                of the QiYi Bullfight. Out of the box, it turns smoothly and has
+                a clacky feeling. It comes in a large box with a high-quality
+                mesh cube bag.</font
+              >
+            </blockquote>
+            <input
+              type="submit"
+              value="ADD TO CART"
+              class="addtocart-btn"
+              id="qiyiThunderclapBtn"
+              onclick="addToCart(5)"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" align="center" width="30%" id="mf3RSProduct">
+            <hr width="100%" color="#FF7E26" size="4px;" align="left" />
+            <img src="./css/assets/mfj.jfif" width="65%" alt="mfj" />
+            <blockquote>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                >MoFang JiaoShi MF3RS</font
+              ><br />
+              <font face="century gothic" size="4px" color="black">$6.00</font>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                ><br />
+                <br />
+                The MoFang JiaoShi MF3RS is a new MoYu sub-branded 3x3 speed
+                cube in the Cubing Classroom series. The MF3RS features great
+                performance and premium design features that push the boundaries
+                of what a budget-friendly cube can do.</font
+              >
+            </blockquote>
+            <input
+              type="submit"
+              value="ADD TO CART"
+              class="addtocart-btn"
+              id="mf3RSBtn"
+              onclick="addToCart(6)"
+            />
+          </td>
+          <td valign="top" align="center" width="30%" id="yulongProduct">
+            <hr width="100%" color="#FF7E26" size="4px;" align="left" />
+            <img src="./css/assets/yulong.jpg" width="65%" alt="yulong" />
+            <blockquote>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                >YJ Yulong V2 M</font
+              ><br />
+              <font face="century gothic" size="4px" color="black">$4.00</font>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                ><br />
+                <br />
+                The YJ Yulong V2 M is a budget friendly, magnetic 3x3 from YJ.
+                This cube features an updated design from its predecessor with
+                more ridges on the edges and corners, and slots for the magnets.
+                feels and works very well.</font
+              >
+            </blockquote>
+            <input
+              type="submit"
+              value="ADD TO CART"
+              class="addtocart-btn"
+              id="yjYulongBtn"
+              onclick="addToCart(4)"
+            />
+          </td>
+          <td valign="top" align="center" width="30%" id="shengShouProduct">
+            <hr width="100%" color="#FF7E26" size="4px;" align="left" />
+            <img src="./css/assets/shengshou.jpg" width="65%" alt="shengshou" />
+            <blockquote>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                >ShengShou Mr. M 3x3</font
+              ><br />
+              <font face="century gothic" size="4px" color="black">$10.00</font>
+              <font face="verdana" size="2px" color="#6F6F6F"
+                ><br />
+                <br />
+                The ShengShou Mr. M 3x3 is ShengShou's first magnetic cube
+                release. It features vibrant stickerless shades and a unique
+                bumpy texture on the exterior. The magnets are placed inside
+                designated slots inside the cube, and they give the cube a
+                snappy and tactile feeling.</font
+              >
+            </blockquote>
+            <input
+              type="submit"
+              value="ADD TO CART"
+              class="addtocart-btn"
+              id="shengShouBtn"
+              onclick="addToCart(10)"
+            />
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <!-- <script src="js/log-in.js"></script> -->
+    <script src="js/shop.js"></script>
   </body>
 </html>

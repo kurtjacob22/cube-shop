@@ -5,6 +5,7 @@ var passwords = ["password", "teacher", "admin", "user"];
 var verify = false;
 var verifiedPass = false;
 var userCred;
+var userValidName;
 
 function checkIfValidUser(user) {
   var verify = false;
@@ -13,6 +14,7 @@ function checkIfValidUser(user) {
       //   user.style.outlineColor = "green";
       verify = true;
       userCred = i;
+      userValidName = user[i];
     } else {
       user.style.outlineColor = "red";
     }

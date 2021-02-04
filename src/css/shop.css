@@ -11,7 +11,7 @@
   position: fixed;
   background-color: white;
   z-index: 2;
-  box-shadow: 10px 10px 50px rgb(196, 196, 196);
+  box-shadow: 10px 10px 50px rgb(240, 240, 240);
 }
 
 .logo {
@@ -81,9 +81,9 @@
   background-color: #3dbc68;
 }
 
-.logout-link {
+/* .logout-link {
   margin-left: 600px;
-}
+} */
 
 .logout-link:hover {
   background-color: black;
@@ -119,25 +119,26 @@
 
 .cart {
   width: 10%;
-  height: 60px;
+  height: 70px;
   background-color: #3dbc68;
   border-radius: 13px;
   position: absolute;
   left: -50px;
   z-index: 1;
+  position: fixed;
 }
 
 .cart-logo {
   position: absolute;
   width: 35px;
-  top: 12px;
+  top: 9px;
   left: 60px;
 }
 
 .count-purchases {
   position: absolute;
   color: white;
-  top: 10px;
+  top: 5px;
   left: 10px;
   overflow: hidden;
 }
@@ -146,6 +147,52 @@
   color: white;
   font-size: 10px;
   position: absolute;
-  top: 33px;
+  top: 27px;
   left: 10px;
+}
+
+.total-amt {
+  left: -40px;
+  font-size: 12px;
+  top: 50px;
+}
+
+/* SORT PART */
+
+.sort {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 13px;
+  width: 20%;
+  height: 50px;
+  outline: 0;
+  padding: 10px;
+  padding-right: 10px;
+  margin-left: 20px;
+  font-family: raleway;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.addtocart-btn {
+  background-color: #e27628;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: raleway;
+}
+
+.addtocart-btn:hover {
+  background-color: white;
+  color: #e27628;
+  border: 1px solid #e27628;
+}
+
+.hide {
+  text-decoration: line-through;
+  filter: grayscale(100%);
+  cursor: not-allowed !important;
+  background-image: url("./assets/notAvailable.png");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
