@@ -229,3 +229,15 @@
   font-family: Roboto;
   font-weight: 300;
 }
+
+.ship {
+  margin-top: 100px;
+  background-color: #2d41aa;
+  color: white;
+}
+
+.ship:hover {
+  background-color: white;
+  color: #2d41aa;
+  border: 1px solid #2d41aa;
+}
