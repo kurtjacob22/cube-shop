@@ -3,6 +3,8 @@
 
 @import "./log-in.css";
 @import "./shop.css";
+@import "./payment.css";
+@import "./our-story.css";
 
 /* DEFAULT CSS */
 html {

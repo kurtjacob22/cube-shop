@@ -60,7 +60,8 @@ span {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"] {
   margin-top: 5px;
   background-color: #ededed;
   border-radius: 13px;

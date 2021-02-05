@@ -170,6 +170,10 @@ function Home() {
   window.location.href = "../../index.html";
 }
 
+function OurStory() {
+  window.location.href = "././our-story.html";
+}
+
 function Shop() {
   window.location.replace("././shop.html");
 }
@@ -189,36 +193,44 @@ document
     yuxinProductCount++;
     console.log(yuxinProductCount);
   });
+
 document.getElementById("gts3MBtn").addEventListener("click", function () {
   gts3MProductCount++;
   console.log(gts3MProductCount);
 });
+
 document.getElementById("valk3EliteBtn").addEventListener("click", function () {
   valk3ProductCount++;
   console.log(valk3ProductCount);
 });
+
 document.getElementById("dayanBtn").addEventListener("click", function () {
   dayanProductCount++;
   console.log(dayanProductCount);
 });
+
 document.getElementById("gan356Btn").addEventListener("click", function () {
   gan356ProductCount++;
   console.log(gan356ProductCount);
 });
+
 document
   .getElementById("qiyiThunderclapBtn")
   .addEventListener("click", function () {
     qiyiProductCount++;
     console.log(qiyiProductCount);
   });
+
 document.getElementById("mf3RSBtn").addEventListener("click", function () {
   mf3RSProductCount++;
   console.log(mf3RSProductCount);
 });
+
 document.getElementById("yjYulongBtn").addEventListener("click", function () {
   yulongProductCount++;
   console.log(yulongProductCount);
 });
+
 document.getElementById("shengShouBtn").addEventListener("click", function () {
   shengShouProductCount++;
   console.log(shengShouProductCount);
@@ -226,34 +238,29 @@ document.getElementById("shengShouBtn").addEventListener("click", function () {
 
 function shippingVer() {
   confirm(
-    "Pls Confirm your purchases: \n" +
+    "Pls Confirm your purchases: \n\n" +
       getProductQty("YuXin Little Magic 3x3", yuxinProductCount) +
-      "\n" +
       getProductQty("MoYu WeiLong GTS3 M", gts3MProductCount) +
-      "\n" +
       getProductQty("Valk 3 Elite", valk3ProductCount) +
-      "\n" +
       getProductQty("DaYan TengYun M", dayanProductCount) +
-      "\n" +
       getProductQty("GAN356 X", gan356ProductCount) +
-      "\n" +
       getProductQty("QiYi Thunderclap", qiyiProductCount) +
-      "\n" +
       getProductQty("MoFang JiaoShi MF3RS", mf3RSProductCount) +
-      "\n" +
       getProductQty("YJ Yulong V2 M", yulongProductCount) +
-      "\n" +
-      getProductQty("ShengShou Mr. M 3x3", shengShouProductCount)
+      getProductQty("ShengShou Mr. M 3x3", shengShouProductCount) +
+      "\nTotal Amount is: $" +
+      totalPrice
   )
-    ? (window.location.href = "../../index.html")
+    ? (window.location.href = "../../src/confirm-payment.html")
     : alert("purchase cancelled");
+  // import "../../src/confirm-payment.html"
 }
 
 function getProductQty(prodName, prodCount) {
   var cont;
   if (prodCount != 0) {
-    return (cont = prodCount + "x " + prodName);
+    return (cont = prodCount + "x " + prodName + "\n");
   } else {
-    return undefined;
+    return "";
   }
 }

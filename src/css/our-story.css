@@ -1,0 +1,18 @@
+.our-story {
+  background-image: url("./assets/OurStory1.png");
+}
+
+.not-active {
+  background-color: white !important;
+  color: #c92e2e !important;
+}
+
+.not-active:hover {
+  background-color: #c92e2e !important;
+  color: white !important;
+}
+
+.active-link {
+  background-color: #3dbc68 !important;
+  color: white !important;
+}

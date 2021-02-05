@@ -1,0 +1,68 @@
+.payment {
+  background-color: black;
+  color: white;
+  background-image: url("./assets/CHECK-OUT-1.png");
+}
+
+.name-details {
+  width: 250px !important;
+  border-radius: 0 !important;
+  background-color: rgba(0, 0, 0, 0.397) !important;
+  color: white !important;
+  border: 1px solid white !important;
+  margin-top: 10px !important;
+}
+
+.pad {
+  margin-right: 10px;
+}
+
+.name-details::placeholder {
+  color: white;
+}
+
+.location {
+  margin-top: 10px;
+  width: 515px;
+  height: 50px;
+  padding-left: 15px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.whole-length {
+  margin-top: 10px !important;
+  width: 515px !important;
+}
+
+.confirm-order-btn {
+  background-color: #3dbc68;
+  font-size: 12px;
+  font-weight: bold;
+  font: raleway;
+  color: black;
+  padding: 15px;
+  width: 250px;
+  border-radius: 20px;
+}
+
+.confirm-order-btn:hover {
+  color: #3dbc68;
+  border: 1px solid #3dbc68;
+  background-color: rgba(0, 0, 0, 0.411);
+}
+
+.terms {
+  font-weight: lighter;
+  font-size: 15px;
+}
+
+.payment-hr {
+  background-image: linear-gradient(
+    to right,
+    rgba(204, 204, 204, 0.01),
+    white,
+    rgba(204, 204, 204, 0.01)
+  );
+}
