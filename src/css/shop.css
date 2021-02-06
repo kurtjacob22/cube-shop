@@ -44,6 +44,7 @@
 
   padding-left: 30px;
   padding-right: 30px;
+  border: 1px solid #e27628 !important;
 }
 
 .home-link:hover {
@@ -53,6 +54,7 @@
 
 .shop-link {
   background-color: #c92e2e;
+  border: 1px solid #c92e2e !important;
   color: white;
   padding-left: 30px;
   padding-right: 30px;
@@ -65,6 +67,7 @@
 
 .tournament-link {
   color: #2d41aa;
+  border: 1px solid #2d41aa !important;
 }
 
 .tournament-link:hover {
@@ -74,6 +77,7 @@
 
 .ourstory-link {
   color: #3dbc68;
+  border: 1px solid #3dbc68 !important;
 }
 
 .ourstory-link:hover {
@@ -81,9 +85,10 @@
   background-color: #3dbc68;
 }
 
-/* .logout-link {
-  margin-left: 600px;
-} */
+.logout-link {
+  /* margin-left: 600px; */
+  border: 1px solid black !important;
+}
 
 .logout-link:hover {
   background-color: black;
