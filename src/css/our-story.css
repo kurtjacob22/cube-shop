@@ -58,3 +58,12 @@
 .quote {
   width: 100%;
 }
+
+.ownerT {
+  color: white;
+  text-shadow: 3px 3px 0px black;
+  -webkit-text-stroke: 1px black;
+  font-weight: bold;
+  font-size: 50px;
+  margin-left: 50px;
+}
