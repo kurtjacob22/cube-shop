@@ -237,22 +237,27 @@ document.getElementById("shengShouBtn").addEventListener("click", function () {
 });
 
 function shippingVer() {
-  confirm(
-    "Pls Confirm your purchases: \n\n" +
-      getProductQty("YuXin Little Magic 3x3", yuxinProductCount) +
-      getProductQty("MoYu WeiLong GTS3 M", gts3MProductCount) +
-      getProductQty("Valk 3 Elite", valk3ProductCount) +
-      getProductQty("DaYan TengYun M", dayanProductCount) +
-      getProductQty("GAN356 X", gan356ProductCount) +
-      getProductQty("QiYi Thunderclap", qiyiProductCount) +
-      getProductQty("MoFang JiaoShi MF3RS", mf3RSProductCount) +
-      getProductQty("YJ Yulong V2 M", yulongProductCount) +
-      getProductQty("ShengShou Mr. M 3x3", shengShouProductCount) +
-      "\nTotal Amount is: $" +
-      totalPrice
-  )
-    ? (window.location.href = "../../src/confirm-payment.html")
-    : alert("purchase cancelled");
+  if (totalPrice == 0) {
+    alert("Please Pick a Product");
+  } else {
+    confirm(
+      "Pls Confirm your purchases: \n\n" +
+        getProductQty("YuXin Little Magic 3x3", yuxinProductCount) +
+        getProductQty("MoYu WeiLong GTS3 M", gts3MProductCount) +
+        getProductQty("Valk 3 Elite", valk3ProductCount) +
+        getProductQty("DaYan TengYun M", dayanProductCount) +
+        getProductQty("GAN356 X", gan356ProductCount) +
+        getProductQty("QiYi Thunderclap", qiyiProductCount) +
+        getProductQty("MoFang JiaoShi MF3RS", mf3RSProductCount) +
+        getProductQty("YJ Yulong V2 M", yulongProductCount) +
+        getProductQty("ShengShou Mr. M 3x3", shengShouProductCount) +
+        "\nTotal Amount is: $" +
+        totalPrice
+    )
+      ? (window.location.href = "../../src/confirm-payment.html")
+      : alert("purchase cancelled");
+  }
+
   // import "../../src/confirm-payment.html"
 }
 
