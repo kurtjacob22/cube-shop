@@ -31,7 +31,7 @@ function removeToCart(amount, productKey) {
       "TOTAL : $" + getArraySum(productSubTotal);
   } else {
     alert("Add this item first");
-  } //not appearing in heroku
+  }
 }
 
 function getArraySum(a) {
