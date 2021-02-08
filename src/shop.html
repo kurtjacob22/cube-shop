@@ -60,7 +60,7 @@
     </center>
     <br />
     <br />
-    <div class="cart">
+    <div class="cart" id="cart">
       <span class="count-purchases" id="countPurchases">0</span>
       <span class="items-title">items</span>
       <span class="items-title total-amt" id="displayTotal">TOTAL : $0</span>
@@ -120,11 +120,20 @@
             </blockquote>
             <input
               type="submit"
-              value="ADD TO CART"
+              value="+"
               class="addtocart-btn"
               id="littleMagicBtn"
-              onclick="addToCart(5)"
+              onclick="addToCart(5, 1)"
             />
+            <input
+              type="submit"
+              value="-"
+              class="addtocart-btn remove-btn"
+              id="littleMagicBtn2"
+              onclick="removeToCart(5, 1)"
+            />
+            <br />
+            <p id="countLittleMagic">0 pc</p>
           </td>
           <td valign="top" align="center" width="30%" id="gts3MProduct">
             <hr width="100%" color="#FF7E26" size="4px;" align="left" />
@@ -145,11 +154,20 @@
             </blockquote>
             <input
               type="submit"
-              value="ADD TO CART"
+              value="+"
               class="addtocart-btn"
               id="gts3MBtn"
-              onclick="addToCart(10)"
+              onclick="addToCart(10, 2)"
             />
+            <input
+              type="submit"
+              value="-"
+              class="addtocart-btn remove-btn"
+              id="gts3MBtn2"
+              onclick="removeToCart(10, 2)"
+            />
+            <br />
+            <p id="countGts">0 pc</p>
           </td>
           <td valign="top" align="center" width="30%" id="valk3Product">
             <hr width="100%" color="#FF7E26" size="4px;" align="left" />
@@ -171,11 +189,20 @@
             </blockquote>
             <input
               type="submit"
-              value="ADD TO CART"
+              value="+"
               class="addtocart-btn"
               id="valk3EliteBtn"
-              onclick="addToCart(10)"
+              onclick="addToCart(10, 3)"
             />
+            <input
+              type="submit"
+              value="-"
+              class="addtocart-btn remove-btn"
+              id="valk3EliteBtn2"
+              onclick="removeToCart(10, 3)"
+            />
+            <br />
+            <p id="countValk3">0 pc</p>
           </td>
         </tr>
 
@@ -200,11 +227,20 @@
             </blockquote>
             <input
               type="submit"
-              value="ADD TO CART"
+              value="+"
               class="addtocart-btn"
               id="dayanBtn"
-              onclick="addToCart(7)"
+              onclick="addToCart(7, 4)"
             />
+            <input
+              type="submit"
+              value="-"
+              class="addtocart-btn remove-btn"
+              id="dayanBtn2"
+              onclick="removeToCart(7, 4)"
+            />
+            <br />
+            <p id="countDayan">0 pc</p>
           </td>
           <td valign="top" align="center" width="30%" id="gan356Product">
             <hr width="100%" color="#FF7E26" size="4px;" align="left" />
@@ -225,11 +261,20 @@
             </blockquote>
             <input
               type="submit"
-              value="ADD TO CART"
+              value="+"
               class="addtocart-btn"
               id="gan356Btn"
-              onclick="addToCart(20)"
+              onclick="addToCart(20, 5)"
             />
+            <input
+              type="submit"
+              value="-"
+              class="addtocart-btn remove-btn"
+              id="gan356Btn2"
+              onclick="removeToCart(20, 5)"
+            />
+            <br />
+            <p id="countGan356">0 pc</p>
           </td>
           <td valign="top" align="center" width="30%" id="qiyiProduct">
             <hr width="100%" color="#FF7E26" size="4px;" align="left" />
@@ -255,11 +300,20 @@
             </blockquote>
             <input
               type="submit"
-              value="ADD TO CART"
+              value="+"
               class="addtocart-btn"
               id="qiyiThunderclapBtn"
-              onclick="addToCart(5)"
+              onclick="addToCart(5, 6)"
             />
+            <input
+              type="submit"
+              value="-"
+              class="addtocart-btn remove-btn"
+              id="qiyiThunderclapBtn2"
+              onclick="removeToCart(5, 6)"
+            />
+            <br />
+            <p id="countThunderClap">0 pc</p>
           </td>
         </tr>
         <tr>
@@ -282,11 +336,20 @@
             </blockquote>
             <input
               type="submit"
-              value="ADD TO CART"
+              value="+"
               class="addtocart-btn"
               id="mf3RSBtn"
-              onclick="addToCart(6)"
+              onclick="addToCart(6, 7)"
             />
+            <input
+              type="submit"
+              value="-"
+              class="addtocart-btn remove-btn"
+              id="mf3RSBtn2"
+              onclick="removeToCart(6, 7)"
+            />
+            <br />
+            <p id="countMF3RS">0 pc</p>
           </td>
           <td valign="top" align="center" width="30%" id="yulongProduct">
             <hr width="100%" color="#FF7E26" size="4px;" align="left" />
@@ -307,11 +370,20 @@
             </blockquote>
             <input
               type="submit"
-              value="ADD TO CART"
+              value="+"
               class="addtocart-btn"
               id="yjYulongBtn"
-              onclick="addToCart(4)"
+              onclick="addToCart(4, 8)"
             />
+            <input
+              type="submit"
+              value="-"
+              class="addtocart-btn remove-btn"
+              id="yjYulongBtn2"
+              onclick="removeToCart(4, 8)"
+            />
+            <br />
+            <p id="countYulong">0 pc</p>
           </td>
           <td valign="top" align="center" width="30%" id="shengShouProduct">
             <hr width="100%" color="#FF7E26" size="4px;" align="left" />
@@ -333,11 +405,21 @@
             </blockquote>
             <input
               type="submit"
-              value="ADD TO CART"
+              value="+"
               class="addtocart-btn"
               id="shengShouBtn"
-              onclick="addToCart(10)"
+              onclick="addToCart(10, 9)"
             />
+            <input
+              type="submit"
+              value="-"
+              class="addtocart-btn remove-btn"
+              id="shengShouBtn2"
+              onclick="removeToCart(10, 9)"
+            />
+            <br />
+            <p id="countShengShou">0 pc</p>
+            <br />
           </td>
         </tr>
       </table>
@@ -451,6 +533,7 @@
     <center class="rights">&copy; 2021 D'QUBE SHOP. All Rights Reserved</center>
     <br />
     <!-- <script src="js/log-in.js"></script> -->
-    <script src="js/shop.js"></script>
+    <script src="./js/shop.js"></script>
+    <script src="./js/scroll-anim.js"></script>
   </body>
 </html>

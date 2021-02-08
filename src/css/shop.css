@@ -130,6 +130,18 @@
   position: absolute;
   left: -50px;
   z-index: 1;
+  /* position: fixed; */
+}
+
+.fix-pos {
+  width: 160px;
+  height: 70px;
+  background-color: #3dbc68;
+  border-radius: 13px;
+  position: absolute;
+  left: -50px;
+  top: 120px;
+  z-index: 1;
   position: fixed;
 }
 
@@ -180,17 +192,50 @@
 }
 
 .addtocart-btn {
-  background-color: #e27628;
+  background-color: #3dbc68;
   color: white;
-  padding: 15px;
-  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 0px;
   font-family: raleway;
+  font-size: 40px;
 }
 
 .addtocart-btn:hover {
   background-color: white;
-  color: #e27628;
-  border: 1px solid #e27628;
+  color: #3dbc68;
+  border: 1px solid #3dbc68;
+}
+
+.addtocart:active {
+  background-color: #2d41aa !important;
+}
+
+.remove-btn {
+  background-color: #c92e2e;
+  /* color: #c92e2e; */
+}
+
+.remove-btn:hover {
+  color: #c92e2e;
+  border: 1px solid #c92e2e;
+}
+
+#countLittleMagic,
+#countGts,
+#countValk3,
+#countDayan,
+#countGan356,
+#countThunderClap,
+#countMF3RS,
+#countYulong,
+#countShengShou {
+  background-color: #e27628;
+  color: white;
+  width: 22%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: lighter;
 }
 
 .hide {
