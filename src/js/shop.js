@@ -1,6 +1,6 @@
 var count = 0;
 
-var productSubTotal = [, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var productSubTotal = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 var yuxinProductCount = 0;
 var gts3MProductCount = 0;
